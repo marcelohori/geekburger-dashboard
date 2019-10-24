@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29025.244
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeekBurger.Dashboard", "GeekBurger.Dashboard\GeekBurger.Dashboard.csproj", "{84A4221A-7A23-4A0F-A45E-512C59F2DA63}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeekBurger.Dashboard", "GeekBurger.Dashboard\GeekBurger.Dashboard.csproj", "{84A4221A-7A23-4A0F-A45E-512C59F2DA63}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dashboard", "Dashboard\Dashboard.csproj", "{0DAC3570-EB50-42ED-AAB7-E90451D2E865}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dashboard", "Dashboard\Dashboard.csproj", "{0DAC3570-EB50-42ED-AAB7-E90451D2E865}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeekBurger.Dashboard.Contract", "GeekBurger.Dashboard.Contract\GeekBurger.Dashboard.Contract.csproj", "{A3FE5C2C-8DFD-43D5-978A-EF912E00A7B1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{0DAC3570-EB50-42ED-AAB7-E90451D2E865}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0DAC3570-EB50-42ED-AAB7-E90451D2E865}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0DAC3570-EB50-42ED-AAB7-E90451D2E865}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3FE5C2C-8DFD-43D5-978A-EF912E00A7B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3FE5C2C-8DFD-43D5-978A-EF912E00A7B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3FE5C2C-8DFD-43D5-978A-EF912E00A7B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3FE5C2C-8DFD-43D5-978A-EF912E00A7B1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,14 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace Dashboard
+namespace GeekBurger.Dashboard.Contract
 {
-    public class Sales
+    public class SalesResponse
     {
         public Guid StoreId { get; set; }
         public Decimal Total { get; set; }
         public Decimal Value { get; set; }
-        
     }
 }

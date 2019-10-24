@@ -1,20 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 
 namespace GeekBurger.Dashboard.Controllers
 {
     [Route("api/dashboard")]
     public class DashboardController : ControllerBase
     {
-        [HttpGet("{storeid}")]
-        public IActionResult
-        GetSalesByStoreId(Guid storeId)
+        [HttpGet]
+        [Route("api/dashboard/sales")]
+        public IActionResult Sales()
         {
             return Ok();
         }
+
+        [HttpGet]
+        [Route("api/dashboard/usersWithLessOffer")]
+        public IActionResult UsersWithLessOffer()
+        {
+            return Ok();
+        }        
     }
 }
