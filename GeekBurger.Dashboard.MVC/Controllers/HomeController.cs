@@ -1,21 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using GeekBurger.Dashboard.MVC.Models;
 using Microsoft.AspNetCore.Mvc;
-using GeekBurger.Dashboard.MVC.Models;
+using System.Diagnostics;
 
 namespace GeekBurger.Dashboard.MVC.Controllers
 {
     public class HomeController : Controller
     {
         public IActionResult Index()
-        {
-            return View();
-        }
-
-        public IActionResult Privacy()
         {
             return View();
         }
