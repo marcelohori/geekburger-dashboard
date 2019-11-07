@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace GeekBurger.Dashboard
 {
@@ -11,26 +12,24 @@ namespace GeekBurger.Dashboard
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            var mvcCoreBuilder = services.AddMvcCore();
-            mvcCoreBuilder
-            .AddFormatterMappings()
-            .AddJsonFormatters()
-            .AddCors();
+            var mvcCoreBuilder = services.AddMvc();
+
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new Info { Title = "Dashboard", Version = "v1" });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
-
             app.UseMvc();
 
-            app.Run(async (context) =>
+            app.UseSwagger();
+
+            app.UseSwaggerUI(c =>
             {
-                await context.Response.WriteAsync("Hello World!");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
             });
         }
     }

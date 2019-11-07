@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using GeekBurger.Dashboard.Contract;
+using Microsoft.AspNetCore.Mvc;
 
 namespace GeekBurger.Dashboard.Controllers
 {
@@ -9,7 +10,8 @@ namespace GeekBurger.Dashboard.Controllers
         [Route("api/dashboard/sales")]
         public IActionResult Sales()
         {
-            return Ok();
+            SalesResponse response = new SalesResponse();
+            return Ok(response);
         }
 
         [HttpGet]
